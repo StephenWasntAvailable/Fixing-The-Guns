@@ -1,0 +1,23 @@
+add_namespace = ftg
+
+country_event = {
+	
+	id = ftg.0
+	title = ftg.0.t
+	desc = ftg.0.d
+	picture = GFX_news_event_nuke
+	
+	is_triggered_only = yes 
+
+	option = { 
+		name = ftg.0.a
+		add_timed_idea = {
+			idea = ftg_nuked
+			days = 160	
+				} 
+			}			
+		}
+	}
+}
+
+
