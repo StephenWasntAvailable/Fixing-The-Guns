@@ -143,12 +143,12 @@ SS_motorised_division = {
 			motorized = { x = 1 y = 0 }
 			motorized = { x = 1 y = 1 }
 			motorized = { x = 1 y = 2 }
-			motorized_anti_tank = { x = 1 y = 3 }
+			mot_anti_tank_brigade = { x = 1 y = 3 }
 
 			motorized = { x = 2 y = 0 }
 			motorized = { x = 2 y = 1 }
 			motorized = { x = 2 y = 2 }
-			motorized_artillery { x = 2 y = 3 }
+			mot_artillery_brigade { x = 2 y = 3 }
 		}
 		support = {
 			artillery = { x = 0 y = 0 }
@@ -174,12 +174,12 @@ SS_mechanised_division_early = {
 			mechanized = { x = 1 y = 0 }
 			mechanized = { x = 1 y = 1 }
 			mechanized = { x = 1 y = 2 }
-			motorized_anti_tank = { x = 1 y = 3 }
+			mot_anti_tank_brigade = { x = 1 y = 3 }
 			
 			mechanized = { x = 2 y = 0 }
 			mechanized = { x = 2 y = 1 }
 			mechanized = { x = 2 y = 2 }
-			motorized_artillery { x = 2 y = 3 }
+			mot_artillery_brigade { x = 2 y = 3 }
 		}
 		support = {
 			artillery = { x = 0 y = 0 }
