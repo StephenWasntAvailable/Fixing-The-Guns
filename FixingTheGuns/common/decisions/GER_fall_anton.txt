@@ -1,0 +1,87 @@
+
+
+GER_fall_anton_category = {
+
+	GER_fall_anton = {
+
+		icon = generic_operation
+
+		available = {
+			original_tag = GER
+			has_war = yes
+			has_government = fascism
+			OR = {	
+				#Vichy is getting attacked
+				any_country_with_original_tag = {
+					original_tag_to_check = FRA
+					has_focus_tree = vichy_french_focus
+					hidden_trigger = {
+						NOT = { has_country_flag = fall_anton }
+					}	
+					has_war = yes
+				}
+				#Italy is Italing
+				ITA = { surrender_progress > 0.3 }
+				#DDay (lost coastal state in France)
+				custom_trigger_tooltip = {
+					tooltip = GER_fall_anton_tt3
+					OR = {
+						19  = { CONTROLLER = { has_war_with = ROOT } }
+						23  = { CONTROLLER = { has_war_with = ROOT } }
+						30  = { CONTROLLER = { has_war_with = ROOT } }
+						14  = { CONTROLLER = { has_war_with = ROOT } }
+						15  = { CONTROLLER = { has_war_with = ROOT } }
+						29  = { CONTROLLER = { has_war_with = ROOT } }
+						785 = { CONTROLLER = { has_war_with = ROOT } }
+					}
+				}
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		visible = {
+			original_tag = GER
+			has_government = fascism
+			any_country_with_original_tag = {
+				original_tag_to_check = FRA
+				has_government = fascism
+				OR = {
+					is_subject_of = GER
+					has_focus_tree = vichy_french_focus
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 25
+
+			modifier = {
+				factor = 0
+				VIC = { is_ai = no }
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = GER_fall_anton_tt
+			declare_war_on = {
+				target = VIC
+				type = annex_everything
+			}
+			hidden_effect = {
+				random_other_country = {
+					limit = {
+						original_tag = FRA
+						has_government = fascism
+						OR = {
+							is_subject_of = GER
+							has_focus_tree = vichy_french_focus
+						}
+					}	
+					set_country_flag = fall_anton
+					activate_mission = FRA_fall_anton_mission
+					add_timed_idea = { idea = FRA_fall_anton days = 7 }
+				}
+			}
+		}	
+	}
+}

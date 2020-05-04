@@ -1,0 +1,207 @@
+FRA_vichy_france = {
+
+	FRA_scuttle_fleet = {
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			has_focus_tree = vichy_french_focus
+			OR = {
+				OR = {
+					NOT = {
+						OR = {
+							GER = { divisions_in_state = { state = 21 size > 0 } }
+							GER = {
+							any_allied_country = { divisions_in_state = { state = 21 size > 0 } }
+							}
+						}	
+					}
+					has_country_flag = {
+						flag = fall_anton
+						days > 2
+					}
+				}
+				21 = {
+					is_controlled_by = ITA
+				}	
+			}	
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			has_government = fascism
+		}
+
+		complete_effect = {
+			set_country_flag = scuttled_fleet
+			destroy_ships = {
+				type = ship_hull_light
+				count = all
+			}
+			destroy_ships = {
+				type = ship_hull_cruiser
+				count = all
+			}
+			destroy_ships = {
+				type = ship_hull_heavy
+				count = all
+			}
+			destroy_ships = {
+				type = ship_hull_carrier 
+				count = all
+			}
+			destroy_ships = {
+				type = ship_hull_submarine
+				count = all
+			}
+		}
+	}
+
+	FRA_fall_anton_mission = {
+
+		icon = generic_tank
+
+		available = { always = no }
+
+		days_mission_timeout = 7
+		fire_only_once = yes
+
+		activation = {
+			original_tag = FRA
+			has_government = fascism
+			OR = {
+				is_subject_of = GER
+				has_focus_tree = vichy_french_focus
+			}
+			has_country_flag = fall_anton
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = FRA_case_anton_mission_tt
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			#transfer_navy
+			if  = { #italy can become controller of the vichy navy
+				limit = {
+					GER = { divisions_in_state = { state = 21 size > 0 } }					
+				}
+				transfer_navy = { target = GER }
+				else_if = {
+					limit = {
+						ITA = { divisions_in_state = { state = 21 size > 0 } }	
+					}
+					transfer_navy = { target = ITA }
+				}	
+			}		
+			#state transfering
+			GER = { #southern france
+				transfer_state = 26
+				transfer_state = 33
+				transfer_state = 25
+				transfer_state = 31
+				transfer_state = 20
+				transfer_state = 22
+			}
+			if = { #if Lybia is not lost Germany takes North Africa
+			limit = {
+				AND = {
+					448 = { #Tripoli
+							is_controlled_by = ITA
+					}
+					661 = { #Tripolitania
+							is_controlled_by = ITA				
+					}
+				}
+			}
+			GER = { transfer_state = 665 }
+			GER = { transfer_state = 458 }
+			GER = { transfer_state = 460 }
+			GER = { transfer_state = 513 }
+			GER = { transfer_state = 459 }
+			GER = { transfer_state = 461 }
+			GER = { transfer_state = 462 }
+			
+			}
+			if = { #if Italy did really well, they get an extra bonus state (but only if that doesn't lead to bordergore)
+			limit = {
+				AND = {
+					735 = { #Savoy
+						owner = { original_tag = FRA }
+						is_controlled_by = ITA
+					}
+					21 = { #Provence
+						owner = { original_tag = FRA }
+						is_controlled_by = ITA
+					}
+					32 = { #Alpes
+						owner = { original_tag = FRA }
+						is_controlled_by = ITA
+					}
+				}
+			}
+			ITA = { transfer_state = 32 }
+			else = { GER = { transfer_state = 32 } }
+			}
+			if = {
+			limit = {
+				AND = {
+					21 = { #Provence
+						owner = { original_tag = FRA }
+						is_controlled_by = ITA
+					}
+				}
+			}
+			ITA = { transfer_state = 21 }
+			else = { GER = { transfer_state = 21 } }
+			}
+			if = {
+			limit = {
+				AND = {
+					1 = { #Corsica
+						owner = { original_tag = FRA }
+						is_controlled_by = ITA
+					}
+				}
+			}
+			ITA = { transfer_state = 1 }
+			else = { GER = { transfer_state = 1 } }
+			}
+			if = {
+			limit = {
+				AND = {
+					735 = { #Savoy
+						owner = { original_tag = FRA }
+						is_controlled_by = ITA
+					}
+				}
+			}
+			ITA = { transfer_state = 735 }
+			else = { GER = { transfer_state = 735 } }
+			}
+			FRA = { annex_country = { target = ROOT } }
+
+
+			if = {
+				limit = {
+					NOT = { has_country_flag = scuttled_fleet }
+				}
+				GER = { news_event = { id = wtt_news.23 hours = 6 } }
+			}
+			if = {
+				limit = {
+					has_country_flag = scuttled_fleet
+				}
+				GER = { news_event = { id = wtt_news.24 hours = 6 } }
+			}
+			custom_effect_tooltip = GAME_OVER_TT
+		}
+	}
+}	
