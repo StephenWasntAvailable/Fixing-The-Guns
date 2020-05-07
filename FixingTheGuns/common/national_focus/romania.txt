@@ -1410,7 +1410,7 @@
 			46 = {
 				add_resource = {
 					type = oil
-					amount = 16
+					amount = 12
 				}
 			}
 		}
@@ -3933,11 +3933,12 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-		add_tech_bonus = {
-				bonus = 1
+			add_tech_bonus = {
+				name = ROM_the_maresal
+				bonus = 1.0
+				ahead_reduction = 2
 				uses = 1
-				category = armor
-				category = motorized_equipment
+				category = cat_heavy_armor
 			}
 		}
 	}

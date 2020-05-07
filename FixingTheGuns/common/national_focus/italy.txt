@@ -1956,6 +1956,7 @@
 		available = {
 				NOT = {has_full_control_of_state = 450 }
 					NOT = {has_full_control_of_state = 448 }
+						NOT = {has_full_control_of_state = 115 }
 		}
 
 		cost = 5
