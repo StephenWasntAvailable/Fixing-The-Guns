@@ -3936,9 +3936,9 @@
 			add_tech_bonus = {
 				name = ROM_the_maresal
 				bonus = 1.0
-				ahead_reduction = 2
 				uses = 1
-				category = cat_heavy_armor
+				category = armor
+				category = motorized_equipment
 			}
 		}
 	}

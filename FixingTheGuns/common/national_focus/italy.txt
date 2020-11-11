@@ -1108,7 +1108,7 @@
 	focus = {
 		id = ITA_carrier_effort
 		icon = GFX_goal_generic_navy_carrier
-		prerequisite = { focus = ITA_army_primacy }
+		prerequisite = { focus = ITA_mare_nostrum }
 		x = 1
 		y = 1
 		relative_position_id = ITA_mare_nostrum
@@ -1167,7 +1167,6 @@
 	focus = {
 		id = ITA_bomber_effort
 		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = ITA_army_primacy }
 		prerequisite = { focus = ITA_air_innovation }
 		x = 0
 		y = 3
@@ -1956,12 +1955,11 @@
 		available = {
 				NOT = {has_full_control_of_state = 450 }
 					NOT = {has_full_control_of_state = 448 }
-						NOT = {has_full_control_of_state = 115 }
 		}
 
-		cost = 5
+		cost = 1
 		ai_will_do = {
-			factor = 10
+			factor = 0
 			modifier = {
 				factor = 0
 				date < 1937.1.1
