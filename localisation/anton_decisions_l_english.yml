@@ -1,0 +1,11 @@
+﻿l_english:
+ FRA_fall_anton: "Case Anton"
+ FRA_fall_anton_desc: "After Germany broke the armistice, the vichy french army is slowly dissolving."
+ GER_fall_anton_category:0 "Case Anton"
+ GER_fall_anton_category_desc:0 "The intent behind the creation of Vichy France was always to keep the French colonies and the French fleet out of the hands of the allies. However, it is an agreement we may choose to rescind at any time. We have a plan drawn up to forcibly integrate the area, as well as making a lightning push for the French fleet's base at Toulon."
+ GER_fall_anton:1 "Execute Case Anton"
+ GER_fall_anton_tt2:1 "Does not control any French states in North Africa."
+ GER_fall_anton_tt3:1 "Does not control a coastal state in France."
+ GER_fall_anton_desc:0 "Our puppet state in France has outlived its usefulness. We will begin integration into the [Root.GetName] immediately, and, if we move sufficiently swiftly, we may even be able to commandeer the remnants of the French fleet."
+ GER_fall_anton_tt:0 "Annexes Vichy France in 7 days and seizes the French fleet.\n\n§RFrance will be able to scuttle their fleet unless German troops are in Toulon within 2 days!§!\n"
+ fall_anton: "Case Anton" 
