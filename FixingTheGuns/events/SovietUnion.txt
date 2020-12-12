@@ -1385,7 +1385,7 @@ country_event = {
 }
 
 # Purge - New officers less dumb. Regaining org
-#country_event = {
+country_event = {
 	id = soviet.37
 	title = soviet.37.t
 	desc = soviet.37.d
@@ -1411,7 +1411,7 @@ country_event = {
 	}
 }
 # Purge - New officers less dumb. Regaining org
-#country_event = {
+country_event = {
 	id = soviet.38
 	title = soviet.37.t
 	desc = soviet.37.d
@@ -1442,7 +1442,7 @@ country_event = {
 	}
 }
 # Purge - New officers less dumb. Regaining org
-#country_event = {
+country_event = {
 	id = soviet.39
 	title = soviet.37.t
 	desc = soviet.37.d
@@ -1468,7 +1468,7 @@ country_event = {
 	}
 }
 # Purge - New officers less dumb. Regaining org
-#country_event = {
+country_event = {
 	id = soviet.40
 	title = soviet.37.t
 	desc = soviet.37.d
@@ -1499,7 +1499,7 @@ country_event = {
 	}
 }
 # Purge - New officers less dumb. Regaining org
-#country_event = {
+country_event = {
 	id = soviet.41
 	title = soviet.37.t
 	desc = soviet.37.d
@@ -1525,7 +1525,7 @@ country_event = {
 	}
 }
 # Purge - New officers less dumb. Regaining org
-#country_event = {
+country_event = {
 	id = soviet.42
 	title = soviet.37.t
 	desc = soviet.37.d
@@ -1556,7 +1556,7 @@ country_event = {
 	}
 }
 # Purge - New officers less dumb. Regaining org
-#country_event = {
+country_event = {
 	id = soviet.43
 	title = soviet.37.t
 	desc = soviet.37.d
@@ -1582,7 +1582,7 @@ country_event = {
 	}
 }
 # Purge - New officers less dumb. Regaining org
-#country_event = {
+country_event = {
 	id = soviet.44
 	title = soviet.37.t
 	desc = soviet.37.d
@@ -1613,7 +1613,7 @@ country_event = {
 	}
 }
 # Purge - New officers less dumb. Regaining org
-#country_event = {
+country_event = {
 	id = soviet.45
 	title = soviet.37.t
 	desc = soviet.37.d
@@ -2456,4 +2456,24 @@ country_event = {
 		drop_cosmetic_tag = yes
 		clr_global_flag = SOV_became_russia
 	}
+}
+#hidden event to play historic speech
+country_event = {
+	id = soviet.999
+	hidden = yes
+	mean_time_to_happen = { days = 2 }
+	fire_only_once = yes
+	trigger = {
+		tag = SOV
+		has_war_with = GER
+		surrender_progress < 0.5 #let's not tempt fate, it's counter-revolutionary
+		has_government = communism
+		NOT = {
+			has_global_flag = barbarossa_counter
+		}
+	}
+	immediate = {
+		play_no_invincible_armies_effect = yes
+	}
+	option = {}
 }
