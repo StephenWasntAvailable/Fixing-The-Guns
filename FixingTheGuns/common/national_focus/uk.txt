@@ -1363,7 +1363,7 @@ focus_tree = {
 				}
 				set_state_flag = ENG_naval_rearmament_focus_1dockyard
 			}
-		add_ideas = ENG_expand_the_repair_yards
+				add_ideas = ENG_expand_the_repair_yards
 		}
 	}
 
@@ -2010,6 +2010,9 @@ focus_tree = {
 			if = {
 				limit = {
 					has_government = neutrality
+					NOT = {
+						has_completed_focus = SPR_regional_defense_council_of_aragon
+					}
 				}
 				every_other_country = {
 					limit = {
@@ -2150,6 +2153,9 @@ focus_tree = {
 							AND = {
 								is_in_faction_with = ITA
 								ITA = { has_government = fascism }
+							}
+							GRE = { 
+								has_country_flag = GRE_britain_rebuffed
 							}
 						}
 					}
@@ -3038,9 +3044,45 @@ focus_tree = {
 				random_other_country = {
 					limit = {
 						original_tag = SPR
+						if = {
+							limit = {
+								country_exists = SPD
+							}
+							tag = SPD
+						}
+						else_if = {
+							limit = {
+								country_exists = SPA
+							}
+							tag = SPA
+						}
+						else_if = {
+							limit = {
+								country_exists = SPB
+							}
+							tag = SPB
+						}
+						else_if = {
+							limit = {
+								country_exists = SPC
+							}
+							tag = SPC
+						}
 					}
 					transfer_state = 118
 					118 = { add_core_of = PREV }
+					if = {
+						limit = {
+							NOT = { has_global_flag = scw_over }
+						}
+						every_other_country = {
+							limit = {
+								original_tag = SPR
+								exists = yes
+							}
+							118 = { add_core_of = PREV }
+						}
+					}
 					add_opinion_modifier = { target = ENG modifier = ENG_returned_our_territory }
 				}
 			}

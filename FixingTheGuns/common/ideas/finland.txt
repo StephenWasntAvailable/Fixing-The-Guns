@@ -144,7 +144,7 @@ ideas = {
 	theorist = {
 
 		FIN_akseli_anttila = {
-		
+			ledger = army
 			
 			picture = generic_army_europe_2	
 
@@ -166,7 +166,8 @@ ideas = {
 		}
 
 		FIN_vaino_valve = {
-					
+			ledger = navy
+			
 			picture = generic_navy_europe_2
 
 			allowed = {
@@ -320,7 +321,7 @@ ideas = {
 
 	high_command = {
 		FIN_karl_oesch = {
-			
+			ledger = army
 			
 			allowed = {
 				original_tag = FIN
@@ -336,7 +337,7 @@ ideas = {
 		}
 		
 		FIN_valio_porvari = {
-			
+			ledger = air
 			
 			allowed = {
 				original_tag = FIN
@@ -352,6 +353,7 @@ ideas = {
 		}
 
 		FIN_lauri_tiainen = {
+			ledger = army
 			
 			available = {
 				has_completed_focus = FIN_ski_force
@@ -370,7 +372,7 @@ ideas = {
 		}
 
 		FIN_harald_ohquist = {
-			
+			ledger = army
 			
 			allowed = {
 				original_tag = FIN

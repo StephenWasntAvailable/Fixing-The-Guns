@@ -357,8 +357,8 @@ NCountry = {
 	GIE_CONVOY_ON_CREATION = 10, -- Number of convoy a GiE will get on creation.
 	
 	
-	SURRENDER_LIMIT_REDUCTION_PER_COLLABORATION = 0.0, 	--each percent of collaboration will lower surrender limit by this percentage 
-	SURRENDER_RECIPIENT_SCORE_PER_COLLABORATION = 0.0, 	--countries with collaboration will get bonus while game calculates which country the enemy will capitulate
+	SURRENDER_LIMIT_REDUCTION_PER_COLLABORATION = 0.3, 	--each percent of collaboration will lower surrender limit by this percentage 
+	SURRENDER_RECIPIENT_SCORE_PER_COLLABORATION = 1.0, 	--countries with collaboration will get bonus while game calculates which country the enemy will capitulate
 	COMPLIANCE_PER_COLLABORATION = 1.0,					--each percent of collaboration will be converted to this compliance at capitulation
 
 	WILL_LEAD_TO_WAR_FOCUS_PERSISTENCE = 60, -- taken focuses that has lead to war will still make ai prep for war for this many days after being taken
@@ -1547,7 +1547,7 @@ NNavy = {
 	LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.05, -- light gun attack value is divided by this value * 100 and added to shore bombardment modifier 
 
 	GUN_HIT_PROFILES = { -- hit profiles for guns, if target ih profile is lower the gun will have lower accuracy
-		62.5,	-- big guns
+		80.0,	-- big guns
 		145.0,	-- torpedos
 		45.0,	-- small guns
 	},
@@ -2919,8 +2919,10 @@ NIntel = {
 	ARMY_INTEL_COMBAT_BONUS_MIN_INTEL_FOR_BONUS = 5, -- min intel needed to start applying ARMY_INTEL_COMBAT_BONUS_MAX_BONUS
 	ARMY_INTEL_COMBAT_BONUS_MAX_INTEL_FOR_BONUS = 50, -- intel needed to fully apply ARMY_INTEL_COMBAT_BONUS_MAX_BONUS
 
-	NAVAL_SUPREMACY_INTEL_LOW = 0.3,								-- we need more intel than this to get any supremacy
-
+	NAVAL_SUPREMACY_INTEL_LOW = 0.4,								-- we need more intel than this to get any supremacy
+	NAVAL_SUPREMACY_INTEL_LOW_SUPREMACY_PENALTY_START = 0.1,		-- supremacy is reduced to NAVAL_SUPREMACY_INTEL_LOW_SUPREMACY_MIN_PENALTY at or below this intel
+	NAVAL_SUPREMACY_INTEL_LOW_SUPREMACY_MIN_PENALTY = 0.5, -- you get this much supremacy at NAVAL_SUPREMACY_INTEL_LOW_SUPREMACY_PENALTY_START and scales up to 1 at NAVAL_SUPREMACY_INTEL_LOW
+	
 	NAVY_FLEET_COUNT_INTEL_MIN = 0.1,
 	NAVY_FLEET_COUNT_INTEL_MAX = 0.3,
 	NAVY_FLEET_COUNT_INTEL_RANGE_AT_LOWEST_INTEL = 0.5,

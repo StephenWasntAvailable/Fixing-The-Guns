@@ -3,6 +3,12 @@ equipments = {
 	fighter_equipment = {
 		year = 1933
 
+		can_be_produced = {
+			NOT = {
+				has_idea = BUL_army_restrictions
+			}
+		}
+
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
@@ -47,6 +53,12 @@ equipments = {
 
 	cv_fighter_equipment = {
 		year = 1933
+
+		can_be_produced = {
+			NOT = {
+				has_idea = BUL_army_restrictions
+			}
+		}
 
 		is_archetype = yes
 		is_convertable = yes
@@ -95,6 +107,12 @@ equipments = {
 	CAS_equipment = {
 		year = 1933
 
+		can_be_produced = {
+			NOT = {
+				has_idea = BUL_army_restrictions
+			}
+		}
+
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_CAS_equipment
@@ -139,6 +157,12 @@ equipments = {
 
 	cv_CAS_equipment = {
 		year = 1933
+
+		can_be_produced = {
+			NOT = {
+				has_idea = BUL_army_restrictions
+			}
+		}
 
 		is_archetype = yes
 		is_convertable = yes
@@ -186,6 +210,12 @@ equipments = {
 	nav_bomber_equipment = {
 		year = 1933
 
+		can_be_produced = {
+			NOT = {
+				has_idea = BUL_army_restrictions
+			}
+		}
+
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_heavy_fighter_equipment		
@@ -227,6 +257,12 @@ equipments = {
 
 	cv_nav_bomber_equipment = {
 		year = 1933
+
+		can_be_produced = {
+			NOT = {
+				has_idea = BUL_army_restrictions
+			}
+		}
 
 		is_archetype = yes
 		is_convertable = yes
@@ -272,6 +308,12 @@ equipments = {
 	jet_fighter_equipment = {
 		year = 1933
 
+		can_be_produced = {
+			NOT = {
+				has_idea = BUL_army_restrictions
+			}
+		}
+
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
@@ -303,7 +345,7 @@ equipments = {
 		build_cost_ic = 30
 		resources = {
 			aluminium = 2
-			tungsten = 1
+			tungsten = 3
 			rubber = 1
 		}
 		
@@ -441,7 +483,7 @@ equipments = {
 		build_cost_ic = 32
 		resources = {
 			aluminium = 3
-			tungsten = 1
+			tungsten = 3
 			rubber = 1
 		}
 	}
@@ -454,8 +496,8 @@ equipments = {
 		carrier_capable = yes
 		priority = 30
 		
-		air_range = 456
-		maximum_speed = 297 #CV planes have less speed than their land based counterparts 
+		air_range = 570
+		maximum_speed = 330 #CV planes have less speed than their land based counterparts 
 		air_agility = 45
 		air_attack = 9
 		air_defence = 8
@@ -474,8 +516,8 @@ equipments = {
 		carrier_capable = yes
 		priority = 30
 		
-		air_range = 560
-		maximum_speed =	450
+		air_range = 700
+		maximum_speed =	500
 		air_agility = 50
 		air_attack = 18
 		air_defence = 11
@@ -499,8 +541,8 @@ equipments = {
 		carrier_capable = yes
 		priority = 30
 		
-		air_range = 800
-		maximum_speed =	585
+		air_range = 1000
+		maximum_speed =	650
 		air_agility = 65
 		air_attack = 27
 		air_defence = 13
@@ -523,8 +565,8 @@ equipments = {
 		carrier_capable = yes
 		priority = 30
 		
-		air_range = 960
-		maximum_speed =	648
+		air_range = 1200
+		maximum_speed =	720
 		air_agility = 80
 		air_attack = 32
 		air_defence = 15
@@ -618,8 +660,8 @@ equipments = {
 		carrier_capable = yes
 		priority = 50
 		
-		air_range = 400
-		maximum_speed =	351
+		air_range = 700
+		maximum_speed =	390
 		air_agility = 35
 		air_attack = 6
 		air_defence = 14
@@ -639,8 +681,8 @@ equipments = {
 		carrier_capable = yes
 		priority = 50
 		
-		air_range = 640
-		maximum_speed =	405
+		air_range = 1000
+		maximum_speed =	450
 		air_agility = 39
 		air_attack = 10
 		air_defence = 16
@@ -665,8 +707,8 @@ equipments = {
 		carrier_capable = yes
 		priority = 50
 		
-		air_range = 800
-		maximum_speed =	495
+		air_range = 1200
+		maximum_speed =	550
 		air_agility = 44
 		air_attack = 14
 		air_defence = 20
@@ -753,8 +795,8 @@ equipments = {
 		carrier_capable = yes
 		priority = 70
 		
-		air_range = 680
-		maximum_speed =	207
+		air_range = 850
+		maximum_speed =	230
 		air_agility = 30
 		air_attack = 6
 		air_defence = 13
@@ -770,8 +812,8 @@ equipments = {
 		carrier_capable = yes
 		priority = 70
 		
-		air_range = 744
-		maximum_speed =	270
+		air_range = 930
+		maximum_speed =	300
 		air_agility = 35
 		air_attack = 10
 		air_defence = 15
@@ -793,8 +835,8 @@ equipments = {
 		carrier_capable = yes
 		priority = 70
 		
-		air_range = 880
-		maximum_speed =	360
+		air_range = 1100
+		maximum_speed =	400
 		air_agility = 40
 		air_attack = 14
 		air_defence = 17
@@ -811,6 +853,12 @@ equipments = {
 	# ROCKET INTERCEPTORS ###############
 	rocket_interceptor_equipment = {
 		year = 1936
+
+		can_be_produced = {
+			NOT = {
+				has_idea = BUL_army_restrictions
+			}
+		}
 
 		is_archetype = yes
 		is_convertable = yes
@@ -835,7 +883,7 @@ equipments = {
 		build_cost_ic = 14
 		resources = {
 			aluminium = 2
-			tungsten = 1
+			tungsten = 2
 			rubber = 1
 		}
 
@@ -862,7 +910,7 @@ equipments = {
 		build_cost_ic = 16
 		resources = {
 			aluminium = 3
-			tungsten = 1
+			tungsten = 2
 			rubber = 1
 		}		
 	}
@@ -884,7 +932,7 @@ equipments = {
 		build_cost_ic = 18
 		resources = {
 			aluminium = 3
-			tungsten = 1
+			tungsten = 3
 			rubber = 1
 		}			
 	}
@@ -906,7 +954,7 @@ equipments = {
 		build_cost_ic = 20
 		resources = {
 			aluminium = 3
-			tungsten = 1
+			tungsten = 3
 			rubber = 1
 		}
 	}
@@ -935,7 +983,7 @@ equipments = {
 		build_cost_ic = 14
 		resources = {
 			aluminium = 2
-			tungsten = 1
+			tungsten = 2
 			rubber = 1
 		}
 

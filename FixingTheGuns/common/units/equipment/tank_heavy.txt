@@ -3,6 +3,12 @@ equipments = {
 	heavy_tank_equipment = {
 		year = 1934
 
+		can_be_produced = {
+			NOT = {
+				has_idea = BUL_army_restrictions
+			}
+		}
+
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_heavy_tank_equipment
@@ -46,7 +52,7 @@ equipments = {
 			chromium = 3
 		}
 		
-		fuel_consumption = 4.8
+		fuel_consumption = 4.4
 	}
 
 	# 1934
@@ -82,13 +88,12 @@ equipments = {
 		hard_attack = 30
 		ap_attack = 111
 		
-		build_cost_ic = 34 
+		build_cost_ic = 28 
 		resources = {
 #			oil = 1
 			steel = 3
 			chromium = 3
 		}
-		fuel_consumption = 5.6
 	}
 
 	# 1943
@@ -114,17 +119,22 @@ equipments = {
 		hard_attack = 40
 		ap_attack = 131
 		
-		build_cost_ic = 37
+		build_cost_ic = 32
 		resources = {
 			#oil = 1
 			steel = 4
 			chromium = 3
 		}
-		fuel_consumption = 6.4
 	}
 
 	heavy_tank_artillery_equipment = {
 		year = 1934
+
+		can_be_produced = {
+			NOT = {
+				has_idea = BUL_army_restrictions
+			}
+		}
 
 		is_archetype = yes
 		is_convertable = yes
@@ -162,13 +172,13 @@ equipments = {
 		ap_attack = 8
 		air_attack = 0
 		
-		build_cost_ic = 24
+		build_cost_ic = 25
 		resources = {
 			#oil = 1
 			steel = 3
 			chromium = 3
 		}
-		fuel_consumption = 2.4
+		fuel_consumption = 2.2
 	}
 
 	heavy_tank_artillery_equipment_1 = {
@@ -208,13 +218,12 @@ equipments = {
 		soft_attack = 74
 		hard_attack = 2
 		
-		build_cost_ic = 33
+		build_cost_ic = 28
 		resources = {
 			#oil = 1
 			steel = 4
 			chromium = 3
 		}
-		fuel_consumption = 2.8
 	}
 
 	heavy_tank_artillery_equipment_3 = {
@@ -242,17 +251,22 @@ equipments = {
 		soft_attack = 80
 		hard_attack = 2.5
 		
-		build_cost_ic = 36
+		build_cost_ic = 32
 		resources = {
 			#oil = 1
 			steel = 5
 			chromium = 3
 		}
-		fuel_consumption = 3.2
 	}
 
 	heavy_tank_destroyer_equipment = {
 		year = 1934
+
+		can_be_produced = {
+			NOT = {
+				has_idea = BUL_army_restrictions
+			}
+		}
 
 		is_archetype = yes
 		is_convertable = yes
@@ -290,13 +304,13 @@ equipments = {
 		ap_attack = 96
 		air_attack = 0
 		
-		build_cost_ic = 24
+		build_cost_ic = 25
 		resources = {
 			#oil = 1
 			steel = 3
 			chromium = 3
 		}
-		fuel_consumption = 2.4
+		fuel_consumption = 2.2
 	}
 
 	heavy_tank_destroyer_equipment_1 = {
@@ -338,13 +352,12 @@ equipments = {
 		ap_attack = 140
 		air_attack = 0
 		
-		build_cost_ic = 33
+		build_cost_ic = 28
 		resources = {
 			#oil = 1
 			steel = 4
 			chromium = 3
 		}
-		fuel_consumption = 2.8
 	}
 
 	heavy_tank_destroyer_equipment_3 = {
@@ -374,17 +387,22 @@ equipments = {
 		ap_attack = 160
 		air_attack = 0
 		
-		build_cost_ic = 36
+		build_cost_ic = 32
 		resources = {
 			#oil = 2
 			steel = 4
 			chromium = 4
 		}
-		fuel_consumption = 3.2
 	}
 
 	heavy_tank_aa_equipment = {
 		year = 1934
+
+		can_be_produced = {
+			NOT = {
+				has_idea = BUL_army_restrictions
+			}
+		}
 
 		is_archetype = yes
 		is_convertable = yes
@@ -422,13 +440,13 @@ equipments = {
 		ap_attack = 25
 		air_attack = 17
 		
-		build_cost_ic = 24
+		build_cost_ic = 25
 		resources = {
 			#oil = 1
 			steel = 3
 			chromium = 3
 		}
-		fuel_consumption = 1.2
+		fuel_consumption = 1.1
 	}
 
 	heavy_tank_aa_equipment_1 = {
@@ -470,13 +488,12 @@ equipments = {
 		ap_attack = 60
 		air_attack = 33
 		
-		build_cost_ic = 33
+		build_cost_ic = 28
 		resources = {
 			#oil = 1
 			steel = 3
 			chromium = 3
 		}
-		fuel_consumption = 1.5
 	}
 
 	heavy_tank_aa_equipment_3 = {
@@ -508,12 +525,12 @@ equipments = {
 		ap_attack = 88
 		air_attack = 44
 		
-		build_cost_ic = 36
+		build_cost_ic = 32
 		resources = {
 			#oil = 1
 			steel = 4
 			chromium = 3
 		}
-		fuel_consumption = 1.8
+		
 	}
 }
