@@ -5997,7 +5997,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_strengthen_the_mobilization_plan
-		cost = 10
+		cost = 5
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
@@ -6365,7 +6365,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_military_reorganization
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_swap_to_political_advisors }
 
@@ -6468,7 +6468,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_military_reorganization
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_keep_commissars_organization focus = SOV_adjoined_battle_priests }
 
