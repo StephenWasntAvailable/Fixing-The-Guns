@@ -9312,11 +9312,13 @@ ENG_recover_middle_east_oil = {
 		}
 		
 		available = {
-			AND = {
-				controls_state = 446 
-				controls_state = 453 
-				controls_state = 454 
-				controls_state = 455
+			GER = {
+				AND = {
+					NOT = { controls_state = 446 }
+					NOT = { controls_state = 453 }
+					NOT = { controls_state = 454 }
+					NOT = { controls_state = 455 }
+				}
 			}
 		}
 		

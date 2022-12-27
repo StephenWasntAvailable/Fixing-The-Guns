@@ -1788,11 +1788,13 @@ GER_middle_east_resources = {
 		}
 		
 		available = {
-			AND = {
-				controls_state = 446 
-				controls_state = 453 
-				controls_state = 454 
-				controls_state = 455
+			ENG = {
+				AND = {
+					NOT = { controls_state = 446 }
+					NOT = { controls_state = 453 }
+					NOT = { controls_state = 454 }
+					NOT = { controls_state = 455 }
+				}
 			}
 		}
 		
