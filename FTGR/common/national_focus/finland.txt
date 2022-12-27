@@ -1809,7 +1809,7 @@ focus = {
 
 		completion_reward = {
 			GER = {
-				country_event = generic.2
+				country_event = generic.100
 			}
 		}
 	}
