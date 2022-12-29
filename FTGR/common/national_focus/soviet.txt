@@ -396,7 +396,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4612,7 +4612,7 @@ focus_tree = {
 	focus = {
 		id = SOV_strengthen_the_mobilization_plan
 		icon = GFX_focus_SOV_mobilization_plan
-		x = 7
+		x = 8
 		y = 0
 		relative_position_id = SOV_found_the_pcdi
 		cost = 5
@@ -5899,16 +5899,16 @@ focus_tree = {
 	focus = {
 		id = SOV_restore_cossack_units
 		icon = GFX_focus_SOV_restore_cossack_units
-		prerequisite = { focus = SOV_strengthen_the_mobilization_plan }
+		prerequisite = { focus = SOV_desperate_measures }
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = SOV_strengthen_the_mobilization_plan
 		cost = 5
 
 		mutually_exclusive = { focus = SOV_cohesion_first }
 
 		available = {
-
+			NOT = { has_idea = SOV_desperate_measures_ns }
 		}
 		
 		search_filters = {}
@@ -5970,19 +5970,20 @@ focus_tree = {
 	focus = {
 		id = SOV_cohesion_first
 		icon = GFX_focus_secret_rearmament
-		prerequisite = { focus = SOV_strengthen_the_mobilization_plan }
+		prerequisite = { focus = SOV_desperate_measures }
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = SOV_strengthen_the_mobilization_plan
 		cost = 5
 
 		mutually_exclusive = { focus = SOV_restore_cossack_units }
 
 		available = {
+			NOT = { has_idea = SOV_desperate_measures_ns }
 		}
 		
 		search_filters = {}
-
+	
 		completion_reward = {
 			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
 			add_to_variable = { SOV_the_red_army_training_time_factor = 0.1 }
@@ -5994,10 +5995,10 @@ focus_tree = {
 		id = SOV_rehabilitated_military
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = SOV_restore_cossack_units focus = SOV_cohesion_first }
-		x = 0
-		y = 2
-		relative_position_id = SOV_strengthen_the_mobilization_plan
-		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SOV_cohesion_first
+		cost = 5
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
@@ -6018,7 +6019,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = SOV_rehabilitated_military }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = SOV_rehabilitated_military
 		cost = 10
 
@@ -6058,8 +6059,8 @@ focus_tree = {
 		id = SOV_desperate_measures
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = SOV_strengthen_the_mobilization_plan }
-		x = 3
-		y = 2
+		x = 0
+		y = 1
 		relative_position_id = SOV_strengthen_the_mobilization_plan
 		cost = 5
 
@@ -6074,7 +6075,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = SOV_desperate_measures_ns
-				days = 365
+				days = 274 
 			}
 
 			custom_effect_tooltip = SOV_desperate_measures_decisions_unlocked_tt
@@ -6085,8 +6086,7 @@ focus_tree = {
 		id = SOV_an_adaptable_army
 		icon = GFX_focus_prc_infiltration
 		prerequisite = { focus = SOV_rehabilitated_military }
-		prerequisite = { focus = SOV_desperate_measures }
-		x = 1
+		x = -2
 		y = 1
 		relative_position_id = SOV_rehabilitated_military
 		cost = 10
@@ -6102,7 +6102,8 @@ focus_tree = {
 			add_to_variable = { SOV_the_red_army_winter_attrition_factor = -0.1 }
 			add_to_variable = { SOV_the_red_army_acclimatization_cold_climate_gain_factor = 0.15 }
 			add_to_variable = { SOV_the_red_army_acclimatization_hot_climate_gain_factor = 0.15 }
-			add_to_variable = { SOV_the_red_army_terrain_penalty_reduction = 0.05 }
+			add_to_variable = { SOV_the_red_army_terrain_penalty_reduction = 0.0 }
+			add_ideas = SOV_terrain_penalty_reduction
 			custom_effect_tooltip = SOV_an_adaptable_army_ns_tt
 		}
 	}
@@ -6111,9 +6112,8 @@ focus_tree = {
 		id = SOV_lessons_of_war
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = SOV_rehabilitated_military }
-		prerequisite = { focus = SOV_desperate_measures }
-		x = 0
-		y = 1
+		x = 2
+		y = 3
 		relative_position_id = SOV_desperate_measures
 		cost = 5
 
@@ -6155,7 +6155,7 @@ focus_tree = {
 		id = SOV_penal_battalions
 		icon = GFX_focus_SOV_penal_battalions
 		prerequisite = { focus = SOV_desperate_measures }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = SOV_desperate_measures
 		cost = 5
@@ -6202,7 +6202,7 @@ focus_tree = {
 		id = SOV_organization_of_the_partisans
 		icon = GFX_focus_focus_fra_maquis
 		prerequisite = { focus = SOV_lessons_of_war }
-		x = -1
+		x = 3
 		y = 1
 		relative_position_id = SOV_lessons_of_war
 		cost = 10
@@ -6276,7 +6276,7 @@ focus_tree = {
 		id = SOV_smersh
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = SOV_lessons_of_war }
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = SOV_lessons_of_war
 		cost = 10
@@ -6338,7 +6338,7 @@ focus_tree = {
 		id = SOV_experts_in_camouflage
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = SOV_military_reorganization }
-		x = -1
+		x = -3
 		y = 1
 		relative_position_id = SOV_military_reorganization
 		cost = 5
@@ -6362,10 +6362,10 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = SOV_military_reorganization }
 		prerequisite = { focus = SOV_lessons_of_war }
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = SOV_military_reorganization
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_swap_to_political_advisors }
 
@@ -6465,10 +6465,10 @@ focus_tree = {
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = SOV_military_reorganization }
 		prerequisite = { focus = SOV_lessons_of_war }
-		x = 3
+		x = 1
 		y = 1
 		relative_position_id = SOV_military_reorganization
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_keep_commissars_organization focus = SOV_adjoined_battle_priests }
 
