@@ -1342,7 +1342,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_national_specialists_tt
+			custom_effect_tooltip = SOV_upgrade_industrial_designer_tt_modified
 
 			SOV_replace_industrial_designer = yes #"National" Industrial Designers get +5% research bonus
 			hidden_effect = {
