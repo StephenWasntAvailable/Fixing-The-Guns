@@ -50,7 +50,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = GER_four_year_plan
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 8
 		}
@@ -2816,7 +2816,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_rhineland
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -2830,7 +2830,6 @@ focus_tree = {
 		completion_reward = {
 			JAP = {
 				add_opinion_modifier = { target = GER modifier = ger_jap_diplomacy_focus }
-				add_offsite_building = { type = industrial_complex level = 1 }
 			}
 			event_target:WTT_current_china_leader = {
 				add_opinion_modifier = { target = GER modifier = withdrew_advisors }
@@ -2879,7 +2878,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_rhineland
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 0.5
 			modifier = {
@@ -2909,7 +2908,7 @@ focus_tree = {
 		x = -3
 		y = 2
 		relative_position_id = GER_rhineland
-		cost = 5
+		cost = 10
 		available = {
 			is_subject = no
 			NOT = { has_government = communism }
