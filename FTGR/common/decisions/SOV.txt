@@ -11036,7 +11036,7 @@ SOV_industry_relocation = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 		days_remove = SOV_industrial_relocation_days
 
 		modifier = {
