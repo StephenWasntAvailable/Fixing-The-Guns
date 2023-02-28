@@ -321,6 +321,15 @@ technologies = {
 
 		enable_tactic = tactic_blitz
 		
+		light_sp_artillery_brigade = {
+			combat_width = -1.0
+		}
+		medium_sp_artillery_brigade = {
+			combat_width = -1.0
+		}
+		heavy_sp_artillery_brigade = {
+			combat_width = -1.0
+		}
 		
 		path = {
 			leads_to_tech = kampfgruppe 
@@ -511,6 +520,15 @@ technologies = {
 			max_organisation = 5
 		}		
 
+		light_sp_artillery_brigade = {
+			combat_width = -1.0
+		}
+		medium_sp_artillery_brigade = {
+			combat_width = -1.0
+		}
+		heavy_sp_artillery_brigade = {
+			combat_width = -1.0
+		}
 		
 		path = {
 			leads_to_tech = kampfgruppe 
@@ -1241,12 +1259,15 @@ technologies = {
 		
 		light_sp_artillery_brigade = {
 			soft_attack = 0.1
+			combat_width = -1.0
 		}
 		medium_sp_artillery_brigade = {
 			soft_attack = 0.1
+			combat_width = -1.0
 		}
 		heavy_sp_artillery_brigade = {
 			soft_attack = 0.1
+			combat_width = -1.0
 		}
 		coordination_bonus = 0.05
 		enable_tactic = tactic_overwhelming_fire
@@ -3017,6 +3038,11 @@ technologies = {
 		armored_car = {
 			max_organisation = 1
 			breakthrough = 0.10
+		}
+		
+		motorized_rocket_brigade = {
+			breakthrough = 0.10
+			combat_width = -1.0
 		}
 		
 		enable_tactic = tactic_breakthrough

@@ -8956,8 +8956,8 @@ operations = {
 			has_government = democratic
 			has_war_with = GER
 			ICE = { exists = yes }
-			NOR = { has_capitulated = yes }
-			is_in_faction_with = NOR
+			DEN = { has_capitulated = yes }
+			is_in_faction_with = DEN
 		}
 
 		cost = 50
@@ -9349,5 +9349,140 @@ ENG_recover_middle_east_oil = {
 				hours = 2
 			}
 		}
+	}
+}
+
+#Category only allowed for ENG
+ENG_industry_relocation = {
+
+	ENG_generic_industry_relocation = {
+		priority = 10
+
+		icon = generic_construction
+		state_target = yes
+		#targets = { core_states }
+
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_core_of = ROOT
+				is_fully_controlled_by = ROOT
+				is_on_continent = europe
+				infrastructure > 2
+			}
+		}
+
+		target_root_trigger = {
+			original_tag = ENG
+			has_completed_focus = ENG_relocate_to_canada
+			has_civil_war = no
+		}
+
+		allowed = {
+			original_tag = ENG
+		}
+
+		available = {
+			FROM = {
+				is_fully_controlled_by = ROOT
+				infrastructure > 2
+			}
+			has_equipment = { convoy > 199 } 
+		}
+
+		visible = {
+			FROM = {
+				OR = { #Has at least 2 factories
+					arms_factory > 1
+					industrial_complex > 1
+					AND = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+		}
+		cancel_if_not_visible = no
+
+		cost = 50
+		complete_effect = {
+			#hidden_effect = {
+			#	add_equipment_to_stockpile = {
+			#		type = convoy
+			#		amount = -200
+			#	}
+			#}	
+			FROM = {							
+				#set_temp_variable = { ENG_civs_counter = 0 }
+				#set_temp_variable = { ENG_mils_counter = 0 }
+				# Count and remove all Factories
+				for_loop_effect = {
+					end = 24
+					if = {
+						limit = {
+							dockyard > 0
+						}
+						remove_building = {
+							type = dockyard
+							level = 1
+						}
+						ENG_relocate_dock = yes
+					}			
+				}
+				for_loop_effect = {
+					end = 24
+					if = {
+						limit = {
+							industrial_complex > 0
+						}
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+						#add_to_temp_variable = { ENG_civs_counter = 1 }
+						ENG_relocate_civ = yes
+					}			
+				}
+				for_loop_effect = {
+					end = 24
+					if = {
+						limit = {
+							arms_factory > 0
+						}
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+						#add_to_temp_variable = { ENG_mils_counter = 1 }
+						ENG_relocate_mil = yes
+					}			
+				}
+			}
+		}
+		#remove_effect = {
+		#	#hidden_effect = {
+		#	#	add_equipment_to_stockpile = {
+		#	#		type = convoy
+		#	#		amount = 200
+		#	#		producer = ENG
+		#	#	}
+		#	#}
+		#	#RELOCATE FACTORIES	
+		#	#for_loop_effect = {
+		#	#	end = ENG_mils_counter
+		#	#	ENG_relocate_mil = yes
+		#	#	if = {
+		#	#		limit = {
+		#	#			ENG_mils_counter > 0
+		#	#		}
+		#	#		ENG_relocate_mil = yes
+		#	#		subtract_from_temp_variable = { ENG_mils_counter = 1 }
+		#	#	}			
+		#	#}
+		#	#for_loop_effect = {
+		#	#	end = THIS.ENG_civs_counter
+		#	#	ENG_relocate_civ = yes
+		#	#}
+		#}	
 	}
 }
