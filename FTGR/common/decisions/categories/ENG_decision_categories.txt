@@ -105,3 +105,8 @@ ENG_recover_middle_east_oil = {
 		}
 	}
 }
+invade_ireland = {
+	visible = {
+		has_completed_focus = ENG_expand_the_bridgehead
+	}
+}

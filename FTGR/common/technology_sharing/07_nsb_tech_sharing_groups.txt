@@ -1,0 +1,37 @@
+technology_sharing_group = {
+
+	id = baltic_allied_research
+	name = baltic_allied_research_name
+	desc = baltic_allied_research_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.1
+
+	available = {
+		always = yes
+	}
+}
+
+technology_sharing_group = {
+
+	id = ger_soviet_commercial_group
+	name = ger_soviet_commercial_group_name
+	desc = ger_soviet_commercial_group_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.5
+	
+	 categories = { 
+		cat_production
+		synth_resources
+		air_equipment
+		electronics
+		naval_equipment
+	}
+	available = {
+		NOT = {
+			OR = {
+				is_justifying_wargoal_against = SOV
+				has_war_with = SOV
+			}
+		}
+	}
+}

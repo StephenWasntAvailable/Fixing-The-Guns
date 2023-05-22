@@ -3326,3 +3326,7 @@
  britain.102.t:0 "Japanese Naval and Air Assets Making Suspicious Moves"
  britain.102.desc:0 "Recent intelligence suggests that Japan is preparing a full scale assault on our far eastern territories. We must integrate the Malyan colonial administration to ensure the military has priority access to ressources."
  britain.102.a:0 "We hope this will not mess with supplies ..."
+ germany.3000.t:0 "German-Soviet 1940 Commercial Agreement"
+ germany.3000.d:0 "By entering this commercial agrrement with the USSR, we promise to deliver the Lutzow cruiser to the USSR as well as assist them in their oil, aviation, naval and electronic research efforts. In exchange, the USSR will provide us with a preferential discounts on our raw material imports as well as ensure transit for our rubber imports from third party countries. Our economic planners say this will boost our industrial output as well as ensure we have a backdoor to circumvent British blockades. As an added advantage, the USSR will permit Volksdeutsche immigration to our territories"
+ germany.3000.a:0 "Sign the agreement with the Soviets"
+ germany.3000.b:0 "We dont deal with peasants"

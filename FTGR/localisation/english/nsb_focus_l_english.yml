@@ -1991,5 +1991,13 @@
  
  #Fixing the guns
  SOV_terrain_penalty_reductionName:0 "An Adaptable Army"
- SOV_upgrade_industrial_designer_tt_modified:0 "Modify the following Industrial Designers by: \n\n§Y$stalingrad_tractor_factory$§!: Industrial Research Speed: §G+10%§!, Consumer Goods Factories: §Y-5.0%§!, Medium, Light and Heavy Armor: £production_cost Production Cost: §G-10.00%§! \n\n§Y$leningrad_polytechnical_institute$§!: Electronics Research Speed: §G+10%§!, Supply Consumption: §G-10.0%§!, Fighter: £production_cost Production Cost: §G-10.00%§!, Close Air Support: £production_cost Production Cost: §G-10.00%§! \n\n§Y$SOV_soviet_railways$§!: Trains and Railways Research Speed: §G+10%§!, Mobilization Speed: §G+5.0%§!"
- 
+ SOV_upgrade_industrial_designer_tt_modified:0 "Improve the following Industrial Designers by: \n\n§Y$stalingrad_tractor_factory$§!: Industrial Research Speed: §G+10%§!, Consumer Goods Factories: §Y-5.0%§!, §YMilitary Factory§! construction speed: §G+10.00%§!, Medium, Light and Heavy Armor: £production_cost Production Cost: §G-10.00%§! \n\n§Y$leningrad_polytechnical_institute$§!: Electronics Research Speed: §G+10%§!, §YCivilian Factory§! construction speed: §G+10.00%§!, Supply Consumption: §G-10.0%§!, Fighter: £production_cost Production Cost: §G-10.00%§!, Close Air Support: £production_cost Production Cost: §G-10.00%§! \n\n§Y$SOV_soviet_railways$§!: Trains and Railways Research Speed: §G+10%§!, Mobilization Speed: §G+5.0%§!"
+ ENG_relocate_to_canada:0 "Relocate To Canada"
+ ENG_relocate_to_canada_desc:0 "Well... Someone focused too much on Malta?"
+ ENG_winston_churchill_russian:0 "Winstonov Churchillomsky"
+ SOV_GER_trade:0 "German-Soviet 1940 Commercial Agreement"
+ SOV_GER_trade_desc:0 "On 11 February 1940, Germany and the Soviet Union entered into an intricate trade pact in which the Soviet Union would send Germany 650 million Reichsmarks in raw materials in exchange for 650 million Reichsmark in machinery, manufactured goods and technology (From Wikipedia)."
+ ENG_fortified_area:0 "British Fortified Area"
+ ENG_fortified_home_area:0 "Emergency Anti Bombing Measures"
+ ENG_expand_the_bridgehead:0 "Expand The Bridgehead"
+ ENG_expand_the_bridgehead_desc:0 "Emergency measures have to be taken to expand our birdgehead in northern Ireland, even if this means breaking irish neutrality."

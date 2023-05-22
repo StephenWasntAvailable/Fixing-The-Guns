@@ -26,7 +26,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 55 y = 1500 }
+	continuous_focus_position = { x = 55 y = 1600 }
 
 
 ##    ##  #######      ######  ######## ######## ########     ########     ###     ######  ##    ## 
@@ -453,16 +453,30 @@ focus_tree = {
 			show_ideas_tooltip = SOV_soviet_railways
 		}
 	}
-
+	focus = {
+		id = SOV_GER_trade
+		prerequisite = { focus = SOV_finish_the_five_year_plan }
+		relative_position_id = SOV_finish_the_five_year_plan
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 5
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			GER = { 
+				country_event = { id = germany.3000 } 
+			}			
+		}
+	}
 	focus = {
 		id = SOV_third_five_year_plan
 
 		icon = GFX_focus_generic_industry_2
-		prerequisite = { focus = SOV_finish_the_five_year_plan }
+		prerequisite = { focus = SOV_GER_trade }
 		x = 0
 		y = 1
-		relative_position_id = SOV_finish_the_five_year_plan
-		cost = 10
+		relative_position_id = SOV_GER_trade
+		cost = 5
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -1342,7 +1356,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_upgrade_industrial_designer_tt_modified
+			#custom_effect_tooltip = SOV_upgrade_industrial_designer_tt_modified
 
 			SOV_replace_industrial_designer = yes #"National" Industrial Designers get +5% research bonus
 			hidden_effect = {
@@ -1922,7 +1936,7 @@ focus_tree = {
 		id = SOV_transpolar_flights
 
 		icon = GFX_goal_generic_air_fighter2
-		x = 10
+		x = 11
 		y = 0
 		relative_position_id = SOV_infrastructure_effort_nsb
 		cost = 5
@@ -2016,7 +2030,7 @@ focus_tree = {
 
 		icon = GFX_goal_generic_air_production
 		prerequisite = { focus = SOV_expand_the_aircraft_industry }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = SOV_expand_the_aircraft_industry
 		cost = 10
@@ -2040,7 +2054,7 @@ focus_tree = {
 
 		icon = GFX_focus_SOV_merge_plants
 		prerequisite = { focus = SOV_modernize_aircraft_facilities }
-		x = -1
+		x = 0
 		y = 2
 		relative_position_id = SOV_modernize_aircraft_facilities
 		cost = 5
@@ -2442,7 +2456,7 @@ focus_tree = {
 		id = SOV_expand_the_red_fleet
 
 		icon = GFX_goal_generic_build_navy
-		x = 6
+		x = 7
 		y = 0
 		relative_position_id = SOV_transpolar_flights
 		cost = 5
@@ -2994,7 +3008,7 @@ focus_tree = {
 		icon = GFX_focus_SOV_merge_plants
 		prerequisite = { focus = SOV_expand_shipbuilding_plants }
 		x = -1
-		y = 2
+		y = 1
 		relative_position_id = SOV_expand_shipbuilding_plants
 		cost = 5
 
@@ -4612,7 +4626,7 @@ focus_tree = {
 	focus = {
 		id = SOV_strengthen_the_mobilization_plan
 		icon = GFX_focus_SOV_mobilization_plan
-		x = 8
+		x = 10
 		y = 0
 		relative_position_id = SOV_found_the_pcdi
 		cost = 5
@@ -4732,7 +4746,7 @@ focus_tree = {
 		id = SOV_move_industry_to_the_urals
 		icon = GFX_goal_reichsautobahn
 		prerequisite = { focus = SOV_military_engineering_university }
-		x = -3
+		x = 1
 		y = 1
 		relative_position_id = SOV_military_engineering_university
 		cost = 10
@@ -4942,9 +4956,10 @@ focus_tree = {
 		icon = GFX_focus_SOV_the_road_of_life
 		prerequisite = { focus = SOV_leningrad_polytechnical_institute }
 		prerequisite = { focus = SOV_move_industry_to_the_urals }
-		x = 1
-		y = 1
-		relative_position_id = SOV_leningrad_polytechnical_institute
+		
+		x = 0
+		y = 3
+		relative_position_id = SOV_move_industry_to_the_urals
 		cost = 5
 
 		available = {
@@ -4986,7 +5001,7 @@ focus_tree = {
 				}
 			}
 		}
-		
+		continue_if_invalid = yes
 		search_filters = {}
 
 		completion_reward = {
@@ -5001,7 +5016,7 @@ focus_tree = {
 		id = SOV_the_molotov_line
 		icon = GFX_goal_fortify_the_westwall
 		prerequisite = { focus = SOV_military_engineering_university }
-		x = -1
+		x = -3
 		y = 1
 		relative_position_id = SOV_military_engineering_university
 		cost = 10
@@ -5242,7 +5257,7 @@ focus_tree = {
 		id = SOV_improve_the_stalin_line
 		icon = GFX_goal_fortify_the_westwall
 		prerequisite = { focus = SOV_military_engineering_university }
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = SOV_military_engineering_university
 		cost = 10
@@ -5385,7 +5400,7 @@ focus_tree = {
 		id = SOV_the_defense_of_moscow
 		icon = GFX_focus_SOV_the_defense_of_moscow
 		prerequisite = { focus = SOV_move_industry_to_the_urals focus = SOV_improve_the_stalin_line focus = SOV_the_molotov_line }
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = SOV_move_industry_to_the_urals
 		cost = 5
@@ -5624,8 +5639,8 @@ focus_tree = {
 		id = SOV_protect_the_white_sea_baltic_canal
 		icon = GFX_focus_generic_provoke_border_clashes
 		prerequisite = { focus = SOV_military_engineering_university }
-		x = 2
-		y = 2
+		x = 3
+		y = 1
 		relative_position_id = SOV_military_engineering_university
 		cost = 5
 
@@ -5739,7 +5754,7 @@ focus_tree = {
 		id = SOV_far_east_fortification
 		icon = GFX_goal_fortify_the_westwall
 		prerequisite = { focus = SOV_military_engineering_university }
-		x = 3
+		x = 5
 		y = 1
 		relative_position_id = SOV_military_engineering_university
 		cost = 10
@@ -6723,7 +6738,8 @@ focus_tree = {
 				division_template = "NKVD Pogranichnaya Diviziya"
 				is_locked = no
 			}
-
+			SOV = { puppet = MON }
+			SOV = { puppet = TAN }
 			SOV_paranoia_low_decrease_effect = yes
 			mark_focus_tree_layout_dirty = yes
 		}
