@@ -10,6 +10,21 @@ ideas = {
 
 
 	country= {
+		GER_SOV_Trade = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = SOV_transformation_of_nature
+
+			targeted_modifier = {
+				tag = GER
+				trade_cost_for_target_factor = -0.35
+			}
+
+		}
 		SOV_terrain_penalty_reduction = {
 			# Added by Syraw to fix 'An Adaptable Army' focus.
 			name = SOV_terrain_penalty_reductionName
@@ -20,10 +35,10 @@ ideas = {
 				always = no # Added via focus
 			}
 
-			allowed_civil`_war = {
+			allowed_civil_war = {
 			}		
 			modifier = {
-				terrain_trait_xp_gain_factor = 0.15
+				terrain_trait_xp_gain_factor = 0.2
 			}
 		}
 		
@@ -9535,7 +9550,9 @@ ideas = {
 			research_bonus = {
 				industry = 0.1
 			}
-
+			
+			cost = 75
+			
 			traits = { industrial_concern }
 
 			modifier = {
@@ -9559,7 +9576,7 @@ ideas = {
 			research_bonus = {
 				industry = 0.2
 			}
-
+			cost = 75
 			traits = { industrial_concern }
 			equipment_bonus = {
 				medium_tank_chassis = {
@@ -9575,6 +9592,7 @@ ideas = {
 				
 			modifier = {
 				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.1
 			}
 		}
 
@@ -9601,7 +9619,7 @@ ideas = {
 			research_bonus = {
 				electronics = 0.1
 			}
-
+			cost = 75
 			traits = { electronics_concern }
 
 			modifier = {
@@ -9625,7 +9643,7 @@ ideas = {
 			research_bonus = {
 				electronics = 0.2
 			}
-
+			cost = 75
 			traits = { electronics_concern }
 
 			equipment_bonus = {
@@ -9639,6 +9657,7 @@ ideas = {
 			
 			modifier = {
 				supply_consumption_factor = -0.1
+				production_speed_industrial_complex_factor = 0.1
 			}
 		}
 

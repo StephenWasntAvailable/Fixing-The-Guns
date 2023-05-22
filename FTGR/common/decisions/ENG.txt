@@ -8994,11 +8994,7 @@ operations = {
 			has_government = democratic
 			has_war_with = GER
 			IRE = { exists = yes }
-			NOT = { is_in_faction_with = IRE }
-			NOR = { has_capitulated = yes }
-			is_in_faction_with = NOR
-			FRA = { has_capitulated = yes }
-			is_in_faction_with = FRA
+			has_completed_focus = ENG_expand_the_bridgehead
 		}
 
 		cost = 50
