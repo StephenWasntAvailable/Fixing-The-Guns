@@ -295,7 +295,7 @@ technologies = {
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.15
 		global_building_slots_factor = 0.30
-		production_factory_max_efficiency_factor = 0.03
+		production_factory_max_efficiency_factor = 0.02
 		production_lack_of_resource_penalty_factor = -0.1
 		
 		path = {
@@ -368,7 +368,7 @@ technologies = {
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.15
 		global_building_slots_factor = 0.30
-		production_factory_max_efficiency_factor = 0.03
+		production_factory_max_efficiency_factor = 0.02
 		production_lack_of_resource_penalty_factor = -0.1
 		
 		path = {
@@ -409,7 +409,7 @@ technologies = {
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.15
 		global_building_slots_factor = 0.30
-		production_factory_max_efficiency_factor = 0.03
+		production_factory_max_efficiency_factor = 0.02
 		production_lack_of_resource_penalty_factor = -0.1
 		
 		path = {
@@ -449,7 +449,7 @@ technologies = {
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.15
 		global_building_slots_factor = 0.30
-		production_factory_max_efficiency_factor = 0.03
+		production_factory_max_efficiency_factor = 0.02
 		production_lack_of_resource_penalty_factor = -0.1
 		
 		path = {
@@ -489,7 +489,7 @@ technologies = {
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.15
 		global_building_slots_factor = 0.30
-		production_factory_max_efficiency_factor = 0.03
+		production_factory_max_efficiency_factor = 0.02
 		production_lack_of_resource_penalty_factor = -0.1
 		
 		research_cost = 2
