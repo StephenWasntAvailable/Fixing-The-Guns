@@ -33,7 +33,7 @@ sub_units = {
 		weight = 0.8
 		supply_consumption = 0.42
 
-		breakthrough = -0.42
+		breakthrough = -0.25
 
 		suppression = 1.25
 
@@ -97,7 +97,7 @@ sub_units = {
 		weight = 1
 		supply_consumption = 0.46
 
-		breakthrough = -0.25
+		breakthrough = -0.10
 
 		suppression = 1.5
 
@@ -165,7 +165,7 @@ sub_units = {
 		weight = 1.3
 		supply_consumption = 0.6
 
-		breakthrough = -0.25
+		breakthrough = -0.05
 
 		suppression = 1.5
 

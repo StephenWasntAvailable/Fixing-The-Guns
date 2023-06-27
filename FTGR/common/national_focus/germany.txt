@@ -5151,7 +5151,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = ti_bonus
 				name = GER_trade_interdiction
-				cost_reduction = 0.25
+				cost_reduction = 0.5
 				uses = 2
 				category = trade_interdiction_tree
 			}

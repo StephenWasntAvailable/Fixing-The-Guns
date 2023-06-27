@@ -251,7 +251,7 @@ technologies = {
 			max_organisation = 10
 		}	
 		
-		
+		truck_attrition_factor = -0.15
 		path = {
 			leads_to_tech = mechanised_offensive 
 			research_cost_coeff = 1
@@ -321,16 +321,15 @@ technologies = {
 
 		enable_tactic = tactic_blitz
 		
-		light_sp_artillery_brigade = {
+		mot_artillery_brigade = {
 			combat_width = -1.0
 		}
-		medium_sp_artillery_brigade = {
+		motorized_rocket_brigade = {
 			combat_width = -1.0
 		}
-		heavy_sp_artillery_brigade = {
+		mot_rocket_artillery_brigade = {
 			combat_width = -1.0
 		}
-		
 		path = {
 			leads_to_tech = kampfgruppe 
 			research_cost_coeff = 1
@@ -803,8 +802,8 @@ technologies = {
 		}
 		enable_tactic = tactic_relentless_assault
 		
-		conscription = 0.01
-		
+		conscription = 0.01		
+		weekly_casualties_war_support = 0.001
 		path = {
 			leads_to_tech = nd_conscription 
 			research_cost_coeff = 1
@@ -856,7 +855,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		conscription = 0.01
-		
+		weekly_casualties_war_support = 0.001
 		category_army = {
 			defense = 0.10
 		}
@@ -903,10 +902,13 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		#Increased Partisan effect on your land occupied by others
-		resistance_damage_to_garrison_on_our_occupied_states = 0.1 
+		#resistance_damage_to_garrison_on_our_occupied_states = 0.1 
 
 		enable_tactic = tactic_guerrilla_tactics
-		conscription = 0.01
+		conscription = 0.01		
+
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
 		
 		doctrine = yes	
 		research_cost = 4.5
@@ -2239,7 +2241,8 @@ technologies = {
 		xp_unlock_cost = 100
 		max_planning = 0.1
 		max_command_power = 30
-		
+		enemy_operative_detection_chance = 0.1
+		enemy_operative_capture_chance_factor = 0.1
 		path = {
 			leads_to_tech = c3i_theory 
 			research_cost_coeff = 1
