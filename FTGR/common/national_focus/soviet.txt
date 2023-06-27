@@ -780,6 +780,9 @@ focus_tree = {
 				uses = 2
 				category = infantry_weapons
 			}
+			
+			custom_effect_tooltip = SOV_shift_to_armaments_production_ns_tt_mod		
+			add_ideas = new_economic_policy_mod
 		}
 	}
 
@@ -809,13 +812,16 @@ focus_tree = {
 			add_to_variable = { SOV_fyp_production_factory_start_efficiency_factor = 0.05 } #Add efficiency start
 			add_to_variable = { SOV_fyp_industrial_capacity_factory = 0.02 } #Add small output bonus
 			custom_effect_tooltip = SOV_optimize_production_lines_ns_tt
-
+			custom_effect_tooltip = SOV_optimize_production_lines_ns_tt_mod
 			add_tech_bonus = {
 				name = SOV_optimize_production_lines
 				bonus = 1
 				uses = 2
 				category = cat_production
 			}
+						
+			set_variable = { SOV_merge_designers_cost = 25 }
+			set_variable = { SOV_merge_designers_time = 90 }
 		}
 	}
 
@@ -1357,7 +1363,9 @@ focus_tree = {
 
 		completion_reward = {
 			#custom_effect_tooltip = SOV_upgrade_industrial_designer_tt_modified
-
+			hidden_effect = {
+				add_to_variable = { SOV_fyp_consumer_goods_factor = -0.05 }
+			}
 			SOV_replace_industrial_designer = yes #"National" Industrial Designers get +5% research bonus
 			hidden_effect = {
 				add_ideas = SOV_national_specialists_ns
@@ -2157,7 +2165,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_transpolar_flights
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -2184,7 +2192,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_foster_flying_clubs
-		cost = 10
+		cost = 5
 
 		available = {
 			OR = {
@@ -2199,8 +2207,8 @@ focus_tree = {
 			add_to_variable = { SOV_soviet_airforce_air_ace_generation_chance_factor = 0.25 }
 			add_to_variable = { SOV_soviet_airforce_air_weather_penalty = -0.05 }
 			add_to_variable = { SOV_soviet_airforce_air_mission_xp_gain_factor = 0.05 }
-			add_to_variable = { SOV_soviet_airforce_air_training_xp_gain_factor = 0.05 }
-			custom_effect_tooltip = SOV_women_in_aviation_ns_tt
+			add_to_variable = { SOV_soviet_airforce_air_training_xp_gain_factor = 0.1 }
+			custom_effect_tooltip = SOV_women_in_aviation_ns_tt_modified
 
 			air_experience = 25
 			set_rule = {
@@ -2217,22 +2225,23 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_women_in_aviation
-		cost = 10
+		cost = 5
 
 		available = {
 			any_enemy_country = {
 				SOV_is_major_not_original_sov = yes
 			}
 			has_full_control_of_state = 219 #MOSCOW
+			NOT = { has_idea = SOV_desperate_measures_ns }
 		}
 		
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			add_to_variable = { SOV_soviet_airforce_air_night_penalty = -0.2 }
+			add_to_variable = { SOV_soviet_airforce_air_night_penalty = -0.15 }
 			add_to_variable = { SOV_soviet_airforce_air_wing_xp_loss_when_killed_factor = -0.1 }
 			set_variable = { SOV_soviet_airforce_air_strategic_bomber_night_penalty = -0.1 }
-			custom_effect_tooltip = SOV_raskovas_aviation_group_ns_tt
+			custom_effect_tooltip = SOV_raskovas_aviation_group_ns_tt_modified
 
 			custom_effect_tooltip = SOV_night_witches_nsb_tt
 			hidden_effect = {
@@ -2316,11 +2325,11 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SOV_soviet_airforce_air_accidents_factor = -0.25 }
 			add_to_variable = { SOV_soviet_airforce_air_ace_generation_chance_factor = 0.15 }
-			add_to_variable = { SOV_soviet_airforce_air_night_penalty = -0.1 }
+			add_to_variable = { SOV_soviet_airforce_air_night_penalty = -0.15 }
 			add_to_variable = { SOV_soviet_airforce_air_weather_penalty = -0.15 }
 			add_to_variable = { SOV_soviet_airforce_air_wing_xp_loss_when_killed_factor = -0.15 }
 			add_to_variable = { SOV_soviet_airforce_air_fuel_consumption_factor = 0.1 }
-			custom_effect_tooltip = SOV_intensify_pilot_training_program_ns_tt
+			custom_effect_tooltip = SOV_intensify_pilot_training_program_ns_tt_modified
 
 			air_experience = 50
 		}
@@ -2345,9 +2354,9 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SOV_soviet_airforce_air_accidents_factor = -0.25 }
 			add_to_variable = { SOV_soviet_airforce_air_weather_penalty = -0.1 }
-			add_to_variable = { SOV_soviet_airforce_air_training_xp_gain_factor = 0.05 }
+			add_to_variable = { SOV_soviet_airforce_air_training_xp_gain_factor = 0.1 }
 			add_to_variable = { SOV_soviet_airforce_air_wing_xp_loss_when_killed_factor = -0.15 }
-			custom_effect_tooltip = SOV_expand_aviation_institutes_ns_tt
+			custom_effect_tooltip = SOV_expand_aviation_institutes_ns_tt_modified
 		}
 	}
 
@@ -4309,7 +4318,7 @@ focus_tree = {
 						type = medium_tank_destroyer_chassis_2
 						parent_version = 0
 						modules = {
-							main_armament_slot = tank_high_velocity_cannon_3
+							main_armament_slot = tank_high_velocity_cannon_2
 							turret_type_slot = tank_medium_fixed_superstructure_turret
 							suspension_type_slot = tank_christie_suspension
 							armor_type_slot = tank_welded_armor
@@ -4332,7 +4341,7 @@ focus_tree = {
 						type = medium_tank_destroyer_chassis_2
 						parent_version = 0
 						modules = {
-							main_armament_slot = tank_high_velocity_cannon_2
+							main_armament_slot = tank_heavy_cannon_2
 							turret_type_slot = tank_medium_fixed_superstructure_turret
 							suspension_type_slot = tank_christie_suspension
 							armor_type_slot = tank_welded_armor
@@ -5931,10 +5940,21 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SOV_the_red_army_modifier_army_sub_unit_cavalry_speed_factor = 0.05 }
 			add_to_variable = { SOV_the_red_army_cavalry_attack_factor = 0.05 }
-			custom_effect_tooltip = SOV_restore_cossack_units_ns_tt
+			add_to_variable = { SOV_the_red_army_motorized_attack_factor = 0.05 }
+			add_to_variable = { SOV_the_red_army_mechanized_attack_factor = 0.05 }
 
+			add_ideas = proper_heritage_spirit		
+			add_corps_commander_role  = {
+				Character = SOV_issa_pliyev
+				traits = { cavalry_officer cavalry_leader ranger }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 3
+			}
 			show_unit_leaders_tooltip = SOV_lev_dovator
-
+			custom_effect_tooltip = SOV_restore_cossack_units_ns_tt_mod
 			#Spawn Cossack divisions
 			custom_effect_tooltip = SOV_restore_cossack_units_spawn_tt
 			hidden_effect = {
@@ -6059,6 +6079,10 @@ focus_tree = {
 			custom_effect_tooltip = SOV_focus_complete_effect_tt
 			hidden_effect = {
 				remove_ideas = SOV_military_reorganization_ns
+				add_ideas = SOV_military_reorganization_improved_ns
+				every_army_leader = {
+					add_logistics = 1
+				}
 			}
 
 			add_to_variable = { SOV_the_red_army_unit_infantry_design_cost_factor = -0.1 }
@@ -6141,9 +6165,9 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
 			set_variable = { SOV_the_red_army_experience_gain_army_factor = 0 }
-			set_variable = { SOV_the_red_army_experience_loss_factor = 0 }
+			set_variable = { SOV_the_red_army_experience_loss_factor = -0.05 }
 
-			custom_effect_tooltip = SOV_lessons_of_war_ns_tt
+			custom_effect_tooltip = SOV_lessons_of_war_ns_tt_modified
 
 			unlock_decision_tooltip = SOV_order_227
 			custom_effect_tooltip = SOV_lessons_of_war_unlock_military_operations_tt
@@ -6182,6 +6206,7 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
+			add_to_variable = { SOV_the_red_army_training_time_factor = -0.1 }
 			#Spawn Penal divisions
 			custom_effect_tooltip = SOV_penal_battalions_spawn_tt
 			hidden_effect = {

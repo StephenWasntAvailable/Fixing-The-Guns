@@ -7469,12 +7469,7 @@ focus_tree = {
 	focus = {
 		id = uk_iraq_focus
 		available = {
-			IRQ = {
-				OR = { 
-					communism > 0.2
-			 		fascism > 0.2
-			 	} 
-			}
+			ITA = {has_war_with = ENG}
 		} #UK at war with fascist/commie. iraq is fascist/commie
 
 		bypass = {
@@ -7510,13 +7505,7 @@ focus_tree = {
 	focus = {
 		id = uk_iran_focus
 		available = {
-			PER = {
-				exists = yes
-				OR = { 
-					communism > 0.2
-			 		fascism > 0.2
-			 	} 
-			}
+			SOV = {has_war_with = GER}
 		} #UK at war with fascist/commie. iran is fascist/commie
 
 		bypass = {

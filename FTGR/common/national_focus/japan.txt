@@ -1332,7 +1332,6 @@
 
 		completion_reward = {
 			SOV = { country_event = { id = wtt_japan.11 } }
-			ENG = { country_event = { id = britain.102 } }
 		}
 	}
 
@@ -5281,7 +5280,7 @@
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = JAP_carrier_warfare_experiments
-				cost_reduction = 0.25
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_base_strike
 			}
@@ -5437,6 +5436,12 @@
 				bonus = 1.0
 				uses = 1
 				category = bb_tech
+			}
+			add_doctrine_cost_reduction = {
+				name = JAP_carrier_warfare_experiments
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_fleet_in_being
 			}
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = kure_naval_arsenal
