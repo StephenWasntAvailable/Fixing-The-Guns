@@ -1178,7 +1178,8 @@ ideas = {
 				tag = SOV #Main SOV
 			}
 
-			modifier = {
+			modifier = {					
+				weekly_casualties_war_support = 0.001
 				mobilization_speed = 0.25
 				minimum_training_level = -0.05
 				training_time_factor = -0.1
@@ -1929,7 +1930,28 @@ ideas = {
 				custom_modifier_tooltip = SOV_military_reorganization_ns_removal_tt
 			}
 		}
+		
+		SOV_military_reorganization_improved_ns = {
 
+			picture = generic_army_problems
+
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				military_leader_cost_factor = -0.4
+				army_leader_start_planning_level = 1
+				army_leader_start_logistics_level = 1
+			}
+		}
+		
 		SOV_mine_warfare_ns = {
 			name = SOV_mine_warfare
 
@@ -9579,19 +9601,14 @@ ideas = {
 			cost = 75
 			traits = { industrial_concern }
 			equipment_bonus = {
-				medium_tank_chassis = {
-					build_cost_ic = -0.1  instant = yes
-				}
-				light_tank_chassis = {
-					build_cost_ic = -0.1  instant = yes
-				}
-				heavy_tank_chassis = {
-					build_cost_ic = -0.1  instant = yes
+				armor = {
+					instant = yes
+					build_cost_ic = -0.1
+					breakthrough = 0.05
 				}
 			}
 				
 			modifier = {
-				consumer_goods_factor = -0.05
 				production_speed_arms_factory_factor = 0.1
 			}
 		}
@@ -9651,7 +9668,9 @@ ideas = {
 					build_cost_ic = -0.1 instant = yes
 				}
 				small_plane_cas_airframe = {
-					build_cost_ic = -0.1 instant = yes
+					build_cost_ic = -0.1
+					air_ground_attack = 0.1 
+					instant = yes
 				}
 			}
 			

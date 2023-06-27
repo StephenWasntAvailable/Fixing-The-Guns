@@ -9512,6 +9512,8 @@ SOV_set_up_dynamic_modifiers_civil_war = { #Used for Stalinist side in the CW
 	set_variable = { SOS.SOV_the_red_army_conscription_factor = SOV.SOV_the_red_army_conscription_factor }
 	set_variable = { SOS.SOV_the_red_army_modifier_army_sub_unit_cavalry_speed_factor = SOV.SOV_the_red_army_modifier_army_sub_unit_cavalry_speed_factor }
 	set_variable = { SOS.SOV_the_red_army_cavalry_attack_factor = SOV.SOV_the_red_army_cavalry_attack_factor }
+	set_variable = { SOS.SOV_the_red_army_motorized_attack_factor = SOV.SOV_the_red_army_motorized_attack_factor }
+	set_variable = { SOS.SOV_the_red_army_mechanized_attack_factor = SOV.SOV_the_red_army_mechanized_attack_factor }
 	set_variable = { SOS.SOV_the_red_army_training_time_factor = SOV.SOV_the_red_army_training_time_factor }
 	set_variable = { SOS.SOV_the_red_army_winter_attrition_factor = SOV.SOV_the_red_army_winter_attrition_factor }
 	set_variable = { SOS.SOV_the_red_army_heat_attrition_factor = SOV.SOV_the_red_army_heat_attrition_factor }

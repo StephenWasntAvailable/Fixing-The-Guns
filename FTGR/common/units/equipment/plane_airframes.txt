@@ -82,6 +82,7 @@ equipments = {
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
 					plane_special_module_defense_turret
+					plane_materials_small
 				}
 			}
 
@@ -94,9 +95,19 @@ equipments = {
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
 					plane_special_module_defense_turret
+					plane_materials_small
 				}
 			}
+		}		
+		module_count_limit = {
+			category = plane_materials_small
+			count < 2
 		}
+		module_count_limit = {
+			module = light_materials
+			count < 2
+		}
+		
 		module_count_limit = {
 			module = guided_anti_ship_missile
 			count < 2
@@ -275,6 +286,7 @@ equipments = {
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
 					plane_special_module_defense_turret
+					plane_materials_small
 				}
 			}
 
@@ -287,6 +299,7 @@ equipments = {
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
 					plane_special_module_defense_turret
+					plane_materials_small
 				}
 			}
 		}
@@ -366,6 +379,7 @@ equipments = {
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
 					plane_special_module_defense_turret
+					plane_materials_small
 				}
 			}
 
@@ -378,6 +392,7 @@ equipments = {
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
 					plane_special_module_defense_turret
+					plane_materials_small
 				}
 			}
 
@@ -390,6 +405,7 @@ equipments = {
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
 					plane_special_module_defense_turret
+					plane_materials_small
 				}
 			}
 		}
@@ -478,6 +494,7 @@ equipments = {
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
 					plane_special_module_defense_turret
+					plane_materials_small
 				}
 			}
 
@@ -490,6 +507,7 @@ equipments = {
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
 					plane_special_module_defense_turret
+					plane_materials_small
 				}
 			}
 			special_type_slot_3 = {
@@ -501,6 +519,7 @@ equipments = {
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
 					plane_special_module_defense_turret
+					plane_materials_small
 				}
 			}
 		}
@@ -592,6 +611,7 @@ equipments = {
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
 					plane_special_module_defense_turret
+					plane_materials_small
 				}
 			}
 
@@ -604,6 +624,7 @@ equipments = {
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
 					plane_special_module_defense_turret
+					plane_materials_small
 				}
 			}
 			special_type_slot_3 = {
@@ -615,6 +636,7 @@ equipments = {
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
 					plane_special_module_defense_turret
+					plane_materials_small
 				}
 			}
 		}
@@ -704,6 +726,7 @@ equipments = {
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
 					plane_special_module_defense_turret
+					plane_materials_small
 				}
 			}
 
@@ -716,10 +739,16 @@ equipments = {
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
+					plane_materials_small
 				}
 			}
 		}
-
+		
+		module_count_limit = {
+			category = plane_materials_small
+			count < 2
+		}
+		
 		module_count_limit = {
 			module = guided_anti_ship_missile
 			count < 2
@@ -897,6 +926,7 @@ equipments = {
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
+					plane_materials_small
 				}
 			}
 
@@ -909,6 +939,7 @@ equipments = {
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
+					plane_materials_small
 				}
 			}
 		}
@@ -987,6 +1018,7 @@ equipments = {
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
+					plane_materials_small
 				}
 			}
 
@@ -999,6 +1031,7 @@ equipments = {
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
+					plane_materials_small
 				}
 			}
 
@@ -1011,6 +1044,7 @@ equipments = {
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
+					plane_materials_small
 				}
 			}
 		}
@@ -1098,6 +1132,7 @@ equipments = {
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
+					plane_materials_small
 				}
 			}
 
@@ -1110,6 +1145,7 @@ equipments = {
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
+					plane_materials_small
 				}
 			}
 			special_type_slot_3 = {
@@ -1121,6 +1157,7 @@ equipments = {
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
+					plane_materials_small
 				}
 			}
 		}
@@ -1210,6 +1247,7 @@ equipments = {
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
+					plane_materials_small
 				}
 			}
 
@@ -1222,6 +1260,7 @@ equipments = {
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
+					plane_materials_small
 				}
 			}
 			special_type_slot_3 = {
@@ -1233,6 +1272,7 @@ equipments = {
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
+					plane_materials_small
 				}
 			}
 		}
