@@ -1,4 +1,6 @@
 #Category only allowed for GER
+GER_mefo_bills_category = {
+
 	GER_mefo_bills_mission = {
 
 		allowed = { always = no }
