@@ -760,6 +760,7 @@ ideas = {
 							has_idea = partial_economic_mobilisation
 							has_idea = war_economy
 							has_idea = tot_economic_mobilisation
+							has_idea = new_economic_policy_mod
 						}
 					}
 				}
@@ -837,6 +838,7 @@ ideas = {
 				OR = {
 					has_idea = war_economy
 					has_idea = tot_economic_mobilisation
+					has_idea = new_economic_policy_mod
 				}
 				OR = {
 					NOT = {	tag = SOV }
